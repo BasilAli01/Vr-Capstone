@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880084732919",
+    "project_id": "vrbank-bba01",
+    "storage_bucket": "vrbank-bba01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880084732919:android:1e978f0845617c00ae7cf2",
+        "android_client_info": {
+          "package_name": "com.basil.vrbank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDukbnYSgxusVx5JN8CtWMgrZRi7Wv7YiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
