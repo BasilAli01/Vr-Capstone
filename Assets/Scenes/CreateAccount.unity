@@ -478,7 +478,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 53511454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1813354127}
+        m_TargetAssemblyTypeName: AccountManager, Assembly-CSharp
+        m_MethodName: OnConfirmPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &53511454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,7 +998,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 267446066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1813354127}
+        m_TargetAssemblyTypeName: AccountManager, Assembly-CSharp
+        m_MethodName: OnSubmitPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &267446066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,7 +1587,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 401769653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1813354127}
+        m_TargetAssemblyTypeName: AccountManager, Assembly-CSharp
+        m_MethodName: OnContinuePressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &401769653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3302,7 +3338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1165562904}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1813354127}
+        m_TargetAssemblyTypeName: AccountManager, Assembly-CSharp
+        m_MethodName: OnBackPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1165562904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4664,6 +4712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1813354126}
+  - component: {fileID: 1813354127}
   m_Layer: 0
   m_Name: AccountManager
   m_TagString: Untagged
@@ -4686,6 +4735,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1813354127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813354125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652d12b040e8e094db5a368af131eec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccountManager
+  formPanel: {fileID: 732235253}
+  fullNameField: {fileID: 355363290}
+  usernameField: {fileID: 1215344622}
+  fingerprintStatus: {fileID: 393958844}
+  avatarPromptText: {fileID: 1541602809}
+  summaryPanel: {fileID: 411064152}
+  summaryFullName: {fileID: 584744966}
+  summaryUsername: {fileID: 1236027987}
+  summaryFingerprint: {fileID: 1320355523}
+  successPanel: {fileID: 1432514964}
 --- !u!1 &1816138934
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,7 +4839,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1816138937}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1813354127}
+        m_TargetAssemblyTypeName: AccountManager, Assembly-CSharp
+        m_MethodName: OnEditPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1816138937
 MonoBehaviour:
   m_ObjectHideFlags: 0
