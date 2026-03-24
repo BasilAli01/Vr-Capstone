@@ -134,7 +134,7 @@ public class AccountManager : MonoBehaviour
 
     private void ShowFormPanel()
     {
-        formPanel.SetActive(true);
+        formPanel.SetActive(false);
         summaryPanel.SetActive(false);
         successPanel.SetActive(false);
         avatarPromptText.text = "Please enter your details";
@@ -144,7 +144,7 @@ public class AccountManager : MonoBehaviour
     private void ShowSummaryPanel()
     {
         formPanel.SetActive(false);
-        summaryPanel.SetActive(true);
+        summaryPanel.SetActive(false);
         successPanel.SetActive(false);
     }
 
@@ -152,6 +152,6 @@ public class AccountManager : MonoBehaviour
     {
         formPanel.SetActive(false);
         summaryPanel.SetActive(false);
-        successPanel.SetActive(true);
+        successPanel.SetActive(false);
     }
 }
