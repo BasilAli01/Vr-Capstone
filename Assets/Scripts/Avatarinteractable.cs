@@ -4,20 +4,19 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class AvatarInteractable : MonoBehaviour
 {
-    public GameObject spatialPanel;
+    public AccountManager accountManager;
 
     private XRSimpleInteractable interactable;
 
     void Start()
     {
-        spatialPanel.SetActive(false);
         interactable = GetComponent<XRSimpleInteractable>();
         interactable.selectEntered.AddListener(OnAvatarClicked);
     }
 
     void OnAvatarClicked(SelectEnterEventArgs args)
     {
-        spatialPanel.SetActive(true);
+        accountManager.OnAvatarClicked();
     }
 
     void OnDestroy()

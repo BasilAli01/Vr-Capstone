@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Networking;
 using System.Collections;
@@ -7,31 +6,42 @@ using UnityEngine.SceneManagement;
 
 public class AccountManager : MonoBehaviour
 {
-    [Header("Form Panel")]
-    public GameObject formPanel;
+    [Header("Spatial Panel")]
+    public GameObject spatialPanel;
+
+    [Header("Steps")]
+    public GameObject formStep;
+    public GameObject summaryStep;
+    public GameObject successStep;
+
+    [Header("Form Step")]
     public TMP_InputField fullNameField;
     public TMP_InputField usernameField;
     public TextMeshProUGUI fingerprintStatus;
-    public TextMeshProUGUI avatarPromptText;
 
-    [Header("Summary Panel")]
-    public GameObject summaryPanel;
+    [Header("Summary Step")]
     public TextMeshProUGUI summaryFullName;
     public TextMeshProUGUI summaryUsername;
     public TextMeshProUGUI summaryFingerprint;
 
-    [Header("Success Panel")]
-    public GameObject successPanel;
+    [Header("Dialogue")]
+    public TextMeshProUGUI dialogueText;
 
-    // Replace with your actual Firebase project ID
+    private string capturedFingerprintID = "";
     private string projectID = "vrbank-bba01";
     private string firestoreURL;
-    private string capturedFingerprintID = "";
 
     void Start()
     {
         firestoreURL = "https://firestore.googleapis.com/v1/projects/" + projectID + "/databases/(default)/documents/accounts/";
-        ShowFormPanel();
+        spatialPanel.SetActive(false);
+    }
+
+    // Called by AvatarInteractable when dummy is clicked
+    public void OnAvatarClicked()
+    {
+        spatialPanel.SetActive(true);
+        ShowFormStep();
     }
 
     void Update()
@@ -52,29 +62,24 @@ public class AccountManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(fullName))
         {
-            avatarPromptText.text = "Please enter your full name!";
-            avatarPromptText.color = Color.red;
+            dialogueText.text = "Please enter your full name!";
             return;
         }
-
         if (string.IsNullOrEmpty(username))
         {
-            avatarPromptText.text = "Please enter a username!";
-            avatarPromptText.color = Color.red;
+            dialogueText.text = "Please enter a username!";
             return;
         }
-
         if (string.IsNullOrEmpty(capturedFingerprintID))
         {
-            avatarPromptText.text = "Please scan your fingerprint!";
-            avatarPromptText.color = Color.red;
+            dialogueText.text = "Please scan your fingerprint!";
             return;
         }
 
         summaryFullName.text = "Full Name: " + fullName;
         summaryUsername.text = "Username: " + username;
         summaryFingerprint.text = "Fingerprint ID: " + capturedFingerprintID;
-        ShowSummaryPanel();
+        ShowSummaryStep();
     }
 
     public void OnConfirmPressed()
@@ -105,26 +110,19 @@ public class AccountManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.Success)
         {
-            Debug.Log("Account saved successfully!");
-            ShowSuccessPanel();
+            Debug.Log("Account saved!");
+            ShowSuccessStep();
         }
         else
         {
-            avatarPromptText.text = "Error saving account. Try again.";
-            avatarPromptText.color = Color.red;
+            dialogueText.text = "Error saving account. Try again.";
             Debug.LogError("Firestore error: " + request.error);
-            ShowFormPanel();
         }
     }
 
     public void OnEditPressed()
     {
-        ShowFormPanel();
-    }
-
-    public void OnBackPressed()
-    {
-        SceneManager.LoadScene("SampleScene");
+        ShowFormStep();
     }
 
     public void OnContinuePressed()
@@ -132,26 +130,27 @@ public class AccountManager : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    private void ShowFormPanel()
+    private void ShowFormStep()
     {
-        formPanel.SetActive(false);
-        summaryPanel.SetActive(false);
-        successPanel.SetActive(false);
-        avatarPromptText.text = "Please enter your details";
-        avatarPromptText.color = Color.white;
+        formStep.SetActive(true);
+        summaryStep.SetActive(false);
+        successStep.SetActive(false);
+        dialogueText.text = "Hello! Please enter your details below.";
     }
 
-    private void ShowSummaryPanel()
+    private void ShowSummaryStep()
     {
-        formPanel.SetActive(false);
-        summaryPanel.SetActive(false);
-        successPanel.SetActive(false);
+        formStep.SetActive(false);
+        summaryStep.SetActive(true);
+        successStep.SetActive(false);
+        dialogueText.text = "Please confirm your details.";
     }
 
-    private void ShowSuccessPanel()
+    private void ShowSuccessStep()
     {
-        formPanel.SetActive(false);
-        summaryPanel.SetActive(false);
-        successPanel.SetActive(false);
+        formStep.SetActive(false);
+        summaryStep.SetActive(false);
+        successStep.SetActive(true);
+        dialogueText.text = "Your account has been created successfully!";
     }
 }
