@@ -699,7 +699,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1951912952}
-  m_Father: {fileID: 1183377106}
+  m_Father: {fileID: 1443975207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -971,7 +971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1370,6 +1370,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807661650}
   m_CullTransparentMesh: 1
+--- !u!1 &985996270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4709705248824332654, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
+  m_PrefabInstance: {fileID: 1183377105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1063190470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,9 +1864,9 @@ PrefabInstance:
       addedObject: {fileID: 492576392}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
---- !u!224 &1183377106 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4709705248824332655, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
+--- !u!1 &1183377106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8188275072763607947, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
   m_PrefabInstance: {fileID: 1183377105}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1183377107 stripped
@@ -2062,6 +2067,16 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 12bd4b8ecc486d84b9e059255860c49b, type: 2}
+--- !u!1 &1443975206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4709705248824332640, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
+  m_PrefabInstance: {fileID: 1183377105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1443975207 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4709705248824332655, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
+  m_PrefabInstance: {fileID: 1183377105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1622127050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,17 +2254,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652d12b040e8e094db5a368af131eec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccountManager
-  spatialPanel: {fileID: 0}
-  formStep: {fileID: 0}
-  summaryStep: {fileID: 0}
-  successStep: {fileID: 0}
-  fullNameField: {fileID: 0}
-  usernameField: {fileID: 0}
-  fingerprintStatus: {fileID: 0}
-  summaryFullName: {fileID: 0}
-  summaryUsername: {fileID: 0}
-  summaryFingerprint: {fileID: 0}
-  dialogueText: {fileID: 0}
+  spatialPanel: {fileID: 1183377106}
+  formStep: {fileID: 2138916064}
+  summaryStep: {fileID: 985996270}
+  successStep: {fileID: 1443975206}
+  fullNameField: {fileID: 2000000000000103}
+  usernameField: {fileID: 2000000000000203}
+  fingerprintStatus: {fileID: 2000000000000302}
+  summaryFullName: {fileID: 514490816}
+  summaryUsername: {fileID: 1063190472}
+  summaryFingerprint: {fileID: 1327594735}
+  dialogueText: {fileID: 1847106459}
+--- !u!114 &1847106459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4709705248824332643, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
+  m_PrefabInstance: {fileID: 1183377105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1911736770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,7 +2306,7 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1183377106}
+  m_Father: {fileID: 1443975207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2757,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228f2b5d6d88dd0479a662b90d435c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvatarInteractable
-  accountManager: {fileID: 0}
+  accountManager: {fileID: 1813354127}
 --- !u!65 &2059102859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2777,7 +2803,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 0, z: 0}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2059102860
 MonoBehaviour:
@@ -2853,6 +2879,11 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
+--- !u!1 &2138916064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4709705248824332642, guid: 7f798954d7acd934e9aae29ce77dcc1d, type: 3}
+  m_PrefabInstance: {fileID: 1183377105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2000000000000100
 GameObject:
   m_ObjectHideFlags: 0
@@ -4152,7 +4183,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2000000000000402}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1813354127}
+        m_TargetAssemblyTypeName: AccountManager, Assembly-CSharp
+        m_MethodName: OnSubmitPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!222 &2000000000000404
 CanvasRenderer:
   m_ObjectHideFlags: 0
