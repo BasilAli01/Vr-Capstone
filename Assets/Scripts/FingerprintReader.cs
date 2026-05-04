@@ -14,16 +14,13 @@ public class FingerprintReader : MonoBehaviour
 
     public static string LastFingerprintID { get; private set; } = "";
 
-    // Fix: use a private setter accessed via method
     private static bool newFingerprintReceived = false;
-    public static bool NewFingerprintReceived
-    {
-        get { return newFingerprintReceived; }
-    }
-    public static void ClearFingerprint()
-    {
-        newFingerprintReceived = false;
-    }
+    public static bool NewFingerprintReceived => newFingerprintReceived;
+    public static void ClearFingerprint() => newFingerprintReceived = false;
+
+    private static bool authFailed = false;
+    public static bool AuthFailed => authFailed;
+    public static void ClearAuthFailed() => authFailed = false;
 
     void Start()
     {
@@ -55,10 +52,14 @@ public class FingerprintReader : MonoBehaviour
             try
             {
                 string data = serialPort.ReadLine().Trim();
-                if (!string.IsNullOrEmpty(data))
+                if (data.StartsWith("AUTH_SUCCESS:"))
                 {
-                    LastFingerprintID = data;
+                    LastFingerprintID = data.Substring("AUTH_SUCCESS:".Length);
                     newFingerprintReceived = true;
+                }
+                else if (data == "AUTH_FAIL")
+                {
+                    authFailed = true;
                 }
             }
             catch { }

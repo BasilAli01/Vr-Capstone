@@ -30,6 +30,7 @@ public class AccountManager : MonoBehaviour
     private string capturedFingerprintID = "";
     private string projectID = "vrbank-bba01";
     private string firestoreURL;
+    private bool _waitingForFingerprint = false;
 
     void Start()
     {
@@ -42,16 +43,34 @@ public class AccountManager : MonoBehaviour
     {
         spatialPanel.SetActive(true);
         ShowFormStep();
+        BeginFingerprintScan();
+    }
+
+    void BeginFingerprintScan()
+    {
+        capturedFingerprintID = "";
+        _waitingForFingerprint = true;
+        fingerprintStatus.text = "Place your finger on the scanner...";
+        fingerprintStatus.color = Color.white;
     }
 
     void Update()
     {
+        if (!_waitingForFingerprint) return;
+
         if (FingerprintReader.NewFingerprintReceived)
         {
             capturedFingerprintID = FingerprintReader.LastFingerprintID;
             FingerprintReader.ClearFingerprint();
+            _waitingForFingerprint = false;
             fingerprintStatus.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
             fingerprintStatus.color = Color.green;
+        }
+        else if (FingerprintReader.AuthFailed)
+        {
+            FingerprintReader.ClearAuthFailed();
+            fingerprintStatus.text = "Not recognized. Try again.";
+            fingerprintStatus.color = Color.red;
         }
     }
 

@@ -18,7 +18,7 @@ public class LoginManager : MonoBehaviour
         {
             capturedFingerprintID = FingerprintReader.LastFingerprintID;
             FingerprintReader.ClearFingerprint(); // reset flag
-            fingerprintStatusText.text = "✔ Fingerprint Captured (ID: " + capturedFingerprintID + ")";
+            fingerprintStatusText.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
             fingerprintStatusText.color = Color.green;
         }
     }

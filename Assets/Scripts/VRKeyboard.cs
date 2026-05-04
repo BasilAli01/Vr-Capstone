@@ -33,7 +33,7 @@ public class VRKeyboard : MonoBehaviour
         new[] { "Q","W","E","R","T","Y","U","I","O","P" },
         new[] { "A","S","D","F","G","H","J","K","L" },
         new[] { "Z","X","C","V","B","N","M" },
-        new[] { "CAPS","SPACE","⌫","✓" }
+        new[] { "CAPS","SPACE","DEL","OK" }
     };
 
     void Awake()
@@ -63,14 +63,14 @@ public class VRKeyboard : MonoBehaviour
 
         switch (key)
         {
-            case "⌫":
+            case "DEL":
                 if (_activeField.text.Length > 0)
                     _activeField.text = _activeField.text[..^1];
                 break;
             case "SPACE":
                 _activeField.text += " ";
                 break;
-            case "✓":
+            case "OK":
                 _activeField.onSubmit.Invoke(_activeField.text);
                 Hide();
                 return;
@@ -141,7 +141,7 @@ public class VRKeyboard : MonoBehaviour
 
     void BuildSpecialRow(string[] keys, float y, float boardW)
     {
-        // CAPS | SPACE (3x wide) | ⌫ | ✓
+        // CAPS | SPACE (3x wide) | DEL | OK
         float capW   = _keySize * 1.4f;
         float spaceW = _keySize * 3.5f + _keyGap * 2f;
         float backW  = _keySize * 1.4f;
@@ -152,8 +152,8 @@ public class VRKeyboard : MonoBehaviour
 
         PlaceSpecialKey("CAPS",  x + capW / 2f,             y, capW);   x += capW + _keyGap;
         PlaceSpecialKey("SPACE", x + spaceW / 2f,           y, spaceW); x += spaceW + _keyGap;
-        PlaceSpecialKey("⌫",    x + backW / 2f,             y, backW);  x += backW + _keyGap;
-        PlaceSpecialKey("✓",    x + enterW / 2f,            y, enterW);
+        PlaceSpecialKey("DEL",  x + backW / 2f,             y, backW);  x += backW + _keyGap;
+        PlaceSpecialKey("OK",   x + enterW / 2f,            y, enterW);
     }
 
     void PlaceSpecialKey(string key, float x, float y, float w)
@@ -214,8 +214,8 @@ public class VRKeyboard : MonoBehaviour
     {
         "SPACE" => "space",
         "CAPS"  => "caps",
-        "⌫"    => "⌫",
-        "✓"    => "✓",
+        "DEL"  => "del",
+        "OK"   => "ok",
         _       => _capsOn ? key.ToUpper() : key.ToLower()
     };
 
