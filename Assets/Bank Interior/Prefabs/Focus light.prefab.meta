@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e36885dee3ff2434aa29035fcdfad321
+timeCreated: 1512390376
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Focus light.prefab
+  uploadId: 782297

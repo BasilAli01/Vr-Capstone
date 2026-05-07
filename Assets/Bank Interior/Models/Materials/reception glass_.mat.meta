@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 15fff6ee535c97947b21c3a8a0a5a937
+timeCreated: 1511192888
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/reception glass_.mat
+  uploadId: 782297

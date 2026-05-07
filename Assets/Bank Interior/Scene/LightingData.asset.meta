@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 472996adbae57674199d7115b2f961db
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Scene/LightingData.asset
+  uploadId: 782297

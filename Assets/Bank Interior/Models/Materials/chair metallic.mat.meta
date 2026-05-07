@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2c710be99f2450c479ac21d661dc81c3
+timeCreated: 1511894046
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/chair metallic.mat
+  uploadId: 782297

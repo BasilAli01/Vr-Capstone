@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6b441360f243d1946b488994188462df
+timeCreated: 1510854052
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/black plastic.mat
+  uploadId: 782297

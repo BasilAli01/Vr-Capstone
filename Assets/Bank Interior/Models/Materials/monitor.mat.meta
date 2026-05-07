@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c6f31edca03085c4a9703a4b2ca03019
+timeCreated: 1511201583
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/monitor.mat
+  uploadId: 782297

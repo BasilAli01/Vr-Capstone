@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: dc5d5b85b28e1314b83e6e0a17ab158b
+timeCreated: 1510847425
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/notebook.mat
+  uploadId: 782297

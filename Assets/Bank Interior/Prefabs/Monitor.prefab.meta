@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 89b8ef6fe84180c4c80959b3a854b677
+timeCreated: 1511202423
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Monitor.prefab
+  uploadId: 782297

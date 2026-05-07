@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c54ee4f4b25a9594cbbf3a605a803196
+timeCreated: 1510914016
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/metal Rollups.mat
+  uploadId: 782297

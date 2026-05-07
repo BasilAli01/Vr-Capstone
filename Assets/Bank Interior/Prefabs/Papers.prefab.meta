@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6c21263b504cf7148a6416d2c210b2c8
+timeCreated: 1510850240
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Papers.prefab
+  uploadId: 782297

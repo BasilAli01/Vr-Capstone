@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eb6eaeb385d66064caa6d44b18b1834c
+timeCreated: 1510914545
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Air conditioner.prefab
+  uploadId: 782297

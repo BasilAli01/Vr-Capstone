@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 33a2cd3887a56174b8df41d4ce699339
+timeCreated: 1511205111
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Leaflet holder.prefab
+  uploadId: 782297

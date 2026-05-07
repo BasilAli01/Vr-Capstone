@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8b73219d23f757a45876e77a3b389fcb
+timeCreated: 1511173758
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Credit card 2.prefab
+  uploadId: 782297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cd096a7c69e14cd41adebcdfe4738e7f
+timeCreated: 1512325356
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 15600000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/New Terrain.asset
+  uploadId: 782297

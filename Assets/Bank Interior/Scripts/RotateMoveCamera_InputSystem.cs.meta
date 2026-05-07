@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 486eaac9bbe48af4884beb0d426d1787
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Scripts/RotateMoveCamera_InputSystem.cs
+  uploadId: 782297

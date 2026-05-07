@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7060b2bb46c405b4f93877ed5b1f99b5
+timeCreated: 1510851433
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Coffee.prefab
+  uploadId: 782297

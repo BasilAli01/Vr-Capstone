@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e07f71356e2d52147ae193bca3973bbc
+timeCreated: 1511202890
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Keyboard.prefab
+  uploadId: 782297

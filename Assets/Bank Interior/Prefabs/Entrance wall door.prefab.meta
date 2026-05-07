@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 01ef2e94fc38e0f4eaed01670d114040
+timeCreated: 1512389899
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Entrance wall door.prefab
+  uploadId: 782297

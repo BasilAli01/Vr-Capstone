@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fd592139bd4a3f945b82198ea22a6b17
+timeCreated: 1512114948
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Glass partition 2.prefab
+  uploadId: 782297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cf1fe1213d3d817498810103e8d747ae
+timeCreated: 1510827478
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Reports.prefab
+  uploadId: 782297

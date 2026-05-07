@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7be889db6fb9260429b2476fb456e5dd
+timeCreated: 1510854052
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/bin metallic.mat
+  uploadId: 782297

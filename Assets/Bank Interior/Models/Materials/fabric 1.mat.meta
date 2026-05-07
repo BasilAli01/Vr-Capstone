@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cea65d48a17d8c14e9832f25a5b8d3a3
+timeCreated: 1510823446
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/fabric 1.mat
+  uploadId: 782297

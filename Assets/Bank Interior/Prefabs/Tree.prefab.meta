@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cc6fb8e31c44db2449cf01c6441060b1
+timeCreated: 1512383627
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Tree.prefab
+  uploadId: 782297
