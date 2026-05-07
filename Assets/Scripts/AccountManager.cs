@@ -52,25 +52,39 @@ public class AccountManager : MonoBehaviour
         _waitingForFingerprint = true;
         fingerprintStatus.text = "Place your finger on the scanner...";
         fingerprintStatus.color = Color.white;
+        FingerprintReader.SendCommand("ENROLL");
     }
 
     void Update()
     {
         if (!_waitingForFingerprint) return;
 
-        if (FingerprintReader.NewFingerprintReceived)
+        if (FingerprintReader.EnrollReady)
+        {
+            FingerprintReader.ClearEnrollReady();
+            fingerprintStatus.text = "Scan your finger now...";
+            fingerprintStatus.color = Color.white;
+        }
+        else if (FingerprintReader.EnrollRemove)
+        {
+            FingerprintReader.ClearEnrollRemove();
+            fingerprintStatus.text = "Remove finger, then scan again...";
+            fingerprintStatus.color = Color.yellow;
+        }
+        else if (FingerprintReader.NewFingerprintReceived)
         {
             capturedFingerprintID = FingerprintReader.LastFingerprintID;
             FingerprintReader.ClearFingerprint();
             _waitingForFingerprint = false;
-            fingerprintStatus.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
+            fingerprintStatus.text = "Fingerprint Enrolled (ID: " + capturedFingerprintID + ")";
             fingerprintStatus.color = Color.green;
         }
         else if (FingerprintReader.AuthFailed)
         {
             FingerprintReader.ClearAuthFailed();
-            fingerprintStatus.text = "Not recognized. Try again.";
+            fingerprintStatus.text = "Enrollment failed. Try again.";
             fingerprintStatus.color = Color.red;
+            _waitingForFingerprint = false;
         }
     }
 

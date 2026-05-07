@@ -22,6 +22,14 @@ public class FingerprintReader : MonoBehaviour
     public static bool AuthFailed => authFailed;
     public static void ClearAuthFailed() => authFailed = false;
 
+    private static volatile bool enrollReady = false;
+    public static bool EnrollReady => enrollReady;
+    public static void ClearEnrollReady() => enrollReady = false;
+
+    private static volatile bool enrollRemove = false;
+    public static bool EnrollRemove => enrollRemove;
+    public static void ClearEnrollRemove() => enrollRemove = false;
+
     void Start()
     {
         OpenSerialPort();
@@ -62,6 +70,14 @@ public class FingerprintReader : MonoBehaviour
                 {
                     authFailed = true;
                 }
+                else if (data == "ENROLL_READY")
+                {
+                    enrollReady = true;
+                }
+                else if (data == "ENROLL_REMOVE")
+                {
+                    enrollRemove = true;
+                }
             }
             catch (System.Exception e)
             {
@@ -69,6 +85,26 @@ public class FingerprintReader : MonoBehaviour
                     Debug.LogWarning("[FingerprintReader] Read error: " + e.Message);
             }
         }
+    }
+
+    public static void SendCommand(string command)
+    {
+        if (_instance != null && _instance.serialPort != null && _instance.serialPort.IsOpen)
+        {
+            _instance.serialPort.WriteLine(command);
+            Debug.Log("[FingerprintReader] Sent: " + command);
+        }
+        else
+        {
+            Debug.LogWarning("[FingerprintReader] Cannot send command — serial port not open.");
+        }
+    }
+
+    private static FingerprintReader _instance;
+
+    void Awake()
+    {
+        _instance = this;
     }
 
     void OnApplicationQuit()
