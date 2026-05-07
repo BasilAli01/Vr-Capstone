@@ -13,7 +13,9 @@
       "mcp__mcp-unity__get_scene_info",
       "mcp__mcp-unity__load_scene",
       "Bash(xargs grep -l \"guid\")",
-      "Bash(findstr \"guid\")"
+      "Bash(findstr \"guid\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   },
   "enableAllProjectMcpServers": true,
