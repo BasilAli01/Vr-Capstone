@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__mcp-unity__get_gameobject",
+      "mcp__mcp-unity__update_component",
+      "Bash(Get-ChildItem -Recurse -Include \"*[Kk]eyboard*\" -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object FullName)",
+      "mcp__mcp-unity__recompile_scripts",
+      "mcp__mcp-unity__update_gameobject",
+      "mcp__mcp-unity__execute_menu_item",
+      "mcp__mcp-unity__get_console_logs",
+      "mcp__mcp-unity__save_scene",
+      "mcp__mcp-unity__get_scene_info",
+      "mcp__mcp-unity__load_scene",
+      "Bash(xargs grep -l \"guid\")",
+      "Bash(findstr \"guid\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "mcp-unity"
+  ]
+}

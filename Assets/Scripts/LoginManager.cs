@@ -21,14 +21,22 @@ public class LoginManager : MonoBehaviour
         {
             capturedFingerprintID = FingerprintReader.LastFingerprintID;
             FingerprintReader.ClearFingerprint();
-            fingerprintStatusText.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
-            fingerprintStatusText.color = Color.green;
+            if (fingerprintStatusText != null)
+            {
+                fingerprintStatusText.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
+                fingerprintStatusText.color = Color.green;
+            }
+            else
+                Debug.LogError("LoginManager: fingerprintStatusText is not assigned in the Inspector.");
         }
         else if (FingerprintReader.AuthFailed)
         {
             FingerprintReader.ClearAuthFailed();
-            fingerprintStatusText.text = "Not recognized. Try again.";
-            fingerprintStatusText.color = Color.red;
+            if (fingerprintStatusText != null)
+            {
+                fingerprintStatusText.text = "Not recognized. Try again.";
+                fingerprintStatusText.color = Color.red;
+            }
         }
     }
 

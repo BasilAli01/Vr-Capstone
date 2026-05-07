@@ -14,11 +14,11 @@ public class FingerprintReader : MonoBehaviour
 
     public static string LastFingerprintID { get; private set; } = "";
 
-    private static bool newFingerprintReceived = false;
+    private static volatile bool newFingerprintReceived = false;
     public static bool NewFingerprintReceived => newFingerprintReceived;
     public static void ClearFingerprint() => newFingerprintReceived = false;
 
-    private static bool authFailed = false;
+    private static volatile bool authFailed = false;
     public static bool AuthFailed => authFailed;
     public static void ClearAuthFailed() => authFailed = false;
 
@@ -52,9 +52,10 @@ public class FingerprintReader : MonoBehaviour
             try
             {
                 string data = serialPort.ReadLine().Trim();
+                Debug.Log("[FingerprintReader] Received: " + data);
                 if (data.StartsWith("AUTH_SUCCESS:"))
                 {
-                    LastFingerprintID = data.Substring("AUTH_SUCCESS:".Length);
+                    LastFingerprintID = data.Substring("AUTH_SUCCESS:".Length).Trim();
                     newFingerprintReceived = true;
                 }
                 else if (data == "AUTH_FAIL")
@@ -62,7 +63,11 @@ public class FingerprintReader : MonoBehaviour
                     authFailed = true;
                 }
             }
-            catch { }
+            catch (System.Exception e)
+            {
+                if (isRunning)
+                    Debug.LogWarning("[FingerprintReader] Read error: " + e.Message);
+            }
         }
     }
 

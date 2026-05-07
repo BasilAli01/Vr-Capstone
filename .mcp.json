@@ -3,7 +3,7 @@
     "mcp-unity": {
       "command": "node",
       "args": [
-        "D:/UnityProjects/VrBankCapstone/Library/PackageCache/com.gamelovers.mcp-unity@5dc92f540190/Server~/build/index.js"
+        "C:/Users/user/Documents/VrBankCapstone/Library/PackageCache/com.gamelovers.mcp-unity@5dc92f540190/Server~/build/index.js"
       ]
     }
   }
