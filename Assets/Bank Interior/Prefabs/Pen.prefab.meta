@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 04d81848e4a51b04fac9fea8fe5b585c
+timeCreated: 1510823614
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Pen.prefab
+  uploadId: 782297

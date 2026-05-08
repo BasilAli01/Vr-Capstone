@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 956a68748a7509b4e8b34e170ada0e8c
+timeCreated: 1510824944
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Fence.prefab
+  uploadId: 782297

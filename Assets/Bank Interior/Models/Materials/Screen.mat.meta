@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: aecf07faf3ff7ab44a7840ec23b8bb7b
+timeCreated: 1511201583
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/Screen.mat
+  uploadId: 782297

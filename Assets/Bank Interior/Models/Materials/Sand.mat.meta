@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1670d7f18eb46484aac321c2fa1f0de7
+timeCreated: 1512383376
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/Sand.mat
+  uploadId: 782297

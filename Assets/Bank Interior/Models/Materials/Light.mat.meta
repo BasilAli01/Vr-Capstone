@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2683687238fa47b4f8d196d716789047
+timeCreated: 1512321653
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/Light.mat
+  uploadId: 782297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cf8cb8a0ad428e242ac136eea11269b1
+timeCreated: 1510908577
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Dollar.prefab
+  uploadId: 782297

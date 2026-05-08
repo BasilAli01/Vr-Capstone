@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1aad4dc27f4c06d489ace4f1cda579ea
+timeCreated: 1511204885
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/advertising 3.mat
+  uploadId: 782297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5721ff6b32c1e754184fddab97aaa217
+timeCreated: 1512390185
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Floor.prefab
+  uploadId: 782297

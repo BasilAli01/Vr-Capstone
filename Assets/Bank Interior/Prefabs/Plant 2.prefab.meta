@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 68c5a8d74c7001840ab4183617a3915b
+timeCreated: 1511944547
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Plant 2.prefab
+  uploadId: 782297

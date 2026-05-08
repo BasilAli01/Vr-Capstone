@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 388d0567d337f524a8855f036280317c
+timeCreated: 1512390657
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Reception 2.prefab
+  uploadId: 782297

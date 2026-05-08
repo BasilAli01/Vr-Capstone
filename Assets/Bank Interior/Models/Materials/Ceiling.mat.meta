@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 710fc965ffb49414fa02ea2b50174cba
+timeCreated: 1512225931
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/Ceiling.mat
+  uploadId: 782297

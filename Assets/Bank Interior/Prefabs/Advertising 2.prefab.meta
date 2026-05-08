@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c94bdfa0282887c4eb6b32af2ed60337
+timeCreated: 1510916789
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Advertising 2.prefab
+  uploadId: 782297

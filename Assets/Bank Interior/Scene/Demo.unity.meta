@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c0614d16b58b524994c867fc5da1abe
+timeCreated: 1512392265
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Scene/Demo.unity
+  uploadId: 782297

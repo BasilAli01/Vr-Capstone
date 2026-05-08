@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b5beb5783f790c048b27f0507280ef8f
+timeCreated: 1512390116
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Ceiling.prefab
+  uploadId: 782297

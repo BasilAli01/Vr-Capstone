@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 245702fa5f09bbd4ea54dd82872cada7
+timeCreated: 1511170063
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Paintings.prefab
+  uploadId: 782297

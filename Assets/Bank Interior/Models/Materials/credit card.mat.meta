@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 18b0da9d466e1d54c85b525e1268de0d
+timeCreated: 1511173150
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/credit card.mat
+  uploadId: 782297

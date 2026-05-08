@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e321f02a92a86c847b1b606c703eea77
+timeCreated: 1510854720
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/credits book.mat
+  uploadId: 782297

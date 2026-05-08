@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7973bc8a16f4a524cbd9da04f0652f2c
+timeCreated: 1512327281
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Machine information.prefab
+  uploadId: 782297

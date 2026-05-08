@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ff66dc631b1b11a41a3d34dd889925cc
+timeCreated: 1510824253
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Exit picture.prefab
+  uploadId: 782297

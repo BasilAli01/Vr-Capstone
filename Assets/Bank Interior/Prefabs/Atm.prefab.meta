@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8470a09ff1c93f249b67083e7bef12d0
+timeCreated: 1511179915
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Atm.prefab
+  uploadId: 782297

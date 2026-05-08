@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 950a677a65dec03488efecfb792c501e
+timeCreated: 1511107063
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/Glasses.mat
+  uploadId: 782297

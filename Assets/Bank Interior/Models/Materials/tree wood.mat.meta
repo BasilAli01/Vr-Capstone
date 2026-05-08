@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 274a51f94213edb4889dd8cf954d0e95
+timeCreated: 1512383376
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/tree wood.mat
+  uploadId: 782297

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 049227c88dfb61446bae7e47664665b8
+timeCreated: 1511888443
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/information bank.mat
+  uploadId: 782297

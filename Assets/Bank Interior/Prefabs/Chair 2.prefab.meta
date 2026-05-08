@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9044ec4067b0c724887a125a95cc2745
+timeCreated: 1511894506
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Prefabs/Chair 2.prefab
+  uploadId: 782297

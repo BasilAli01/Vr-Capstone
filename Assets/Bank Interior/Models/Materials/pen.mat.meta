@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f637c5c8030fba246a4b7e20f5c4a50b
+timeCreated: 1510821582
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/pen.mat
+  uploadId: 782297

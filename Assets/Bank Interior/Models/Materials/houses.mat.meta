@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 32139ee9372bf2940a4975fbb0dc28e5
+timeCreated: 1512380208
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106397
+  packageName: Bank Interior
+  packageVersion: 1.3
+  assetPath: Assets/Bank Interior/Models/Materials/houses.mat
+  uploadId: 782297
