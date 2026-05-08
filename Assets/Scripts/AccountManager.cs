@@ -36,6 +36,23 @@ public class AccountManager : MonoBehaviour
     {
         firestoreURL = "https://firestore.googleapis.com/v1/projects/" + projectID + "/databases/(default)/documents/accounts/";
         spatialPanel.SetActive(false);
+
+        usernameField.characterLimit = 10;
+        usernameField.onValueChanged.AddListener(OnUsernameChanged);
+    }
+
+    void OnUsernameChanged(string value)
+    {
+        string filtered = "";
+        foreach (char c in value)
+            if (char.IsDigit(c) && filtered.Length < 10)
+                filtered += c;
+
+        if (filtered != value)
+        {
+            usernameField.SetTextWithoutNotify(filtered);
+            usernameField.caretPosition = filtered.Length;
+        }
     }
 
     // Called by AvatarInteractable when dummy is clicked
@@ -88,6 +105,14 @@ public class AccountManager : MonoBehaviour
         {
             dialogueText.text = "Please enter a username!";
             return;
+        }
+        foreach (char c in username)
+        {
+            if (!char.IsDigit(c))
+            {
+                dialogueText.text = "Username must contain digits only (0-9)!";
+                return;
+            }
         }
         if (string.IsNullOrEmpty(capturedFingerprintID))
         {

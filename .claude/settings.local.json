@@ -15,7 +15,9 @@
       "Bash(xargs grep -l \"guid\")",
       "Bash(findstr \"guid\")",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "mcp__mcp-unity__set_transform",
+      "Bash(xargs grep -l \"ActionBasedControllerManager\\\\|TeleportInteractor\")"
     ]
   },
   "enableAllProjectMcpServers": true,
