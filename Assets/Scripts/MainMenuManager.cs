@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class MainMenuManager : MonoBehaviour
@@ -30,8 +31,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void ShowCreateAccount()
     {
-        SetAllPanels(false);
-        createAccountPanel.SetActive(true);
+        SceneManager.LoadScene("CreateAccount");
     }
 
     public void ShowOptions()
