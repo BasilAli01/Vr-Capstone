@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class LoginManager : MonoBehaviour
 {
@@ -11,6 +10,11 @@ public class LoginManager : MonoBehaviour
     public TMP_InputField usernameField;
     public TextMeshProUGUI fingerprintStatusText;
     public Button enterButton;
+
+    [Header("Panels")]
+    public GameObject loginPanel;
+    public GameObject loggedInPanel;
+    public TextMeshProUGUI loggedInText;
 
     private string capturedFingerprintID = "";
     private const string projectID = "vrbank-bba01";
@@ -65,12 +69,18 @@ public class LoginManager : MonoBehaviour
         {
             FirestoreDoc doc = JsonUtility.FromJson<FirestoreDoc>(request.downloadHandler.text);
             string storedID = doc?.fields?.fingerprintID?.stringValue;
+            string fullName = doc?.fields?.fullName?.stringValue;
 
             if (!string.IsNullOrEmpty(storedID) && storedID == capturedFingerprintID)
             {
-                fingerprintStatusText.text = "Login successful!";
-                fingerprintStatusText.color = Color.green;
-                SceneManager.LoadScene("SampleScene");
+                if (loginPanel != null) loginPanel.SetActive(false);
+
+                if (loggedInPanel != null)
+                {
+                    loggedInPanel.SetActive(true);
+                    if (loggedInText != null)
+                        loggedInText.text = "Logged in as " + (string.IsNullOrEmpty(fullName) ? username : fullName);
+                }
             }
             else
             {
@@ -94,6 +104,6 @@ public class LoginManager : MonoBehaviour
     }
 
     [System.Serializable] private class StringValue { public string stringValue; }
-    [System.Serializable] private class DocFields { public StringValue fingerprintID; }
+    [System.Serializable] private class DocFields { public StringValue fingerprintID; public StringValue fullName; }
     [System.Serializable] private class FirestoreDoc { public DocFields fields; }
 }

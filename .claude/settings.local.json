@@ -17,7 +17,9 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "mcp__mcp-unity__set_transform",
-      "Bash(xargs grep -l \"ActionBasedControllerManager\\\\|TeleportInteractor\")"
+      "Bash(xargs grep -l \"ActionBasedControllerManager\\\\|TeleportInteractor\")",
+      "mcp__mcp-unity__duplicate_gameobject",
+      "mcp__mcp-unity__delete_gameobject"
     ]
   },
   "enableAllProjectMcpServers": true,
