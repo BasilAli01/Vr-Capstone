@@ -14,16 +14,29 @@ public class FingerprintReader : MonoBehaviour
 
     public static string LastFingerprintID { get; private set; } = "";
 
-    private static bool newFingerprintReceived = false;
+    private static volatile bool newFingerprintReceived = false;
     public static bool NewFingerprintReceived => newFingerprintReceived;
     public static void ClearFingerprint() => newFingerprintReceived = false;
 
-    private static bool authFailed = false;
+    private static volatile bool authFailed = false;
     public static bool AuthFailed => authFailed;
     public static void ClearAuthFailed() => authFailed = false;
 
+    private static volatile bool enrollReady = false;
+    public static bool EnrollReady => enrollReady;
+    public static void ClearEnrollReady() => enrollReady = false;
+
+    private static volatile bool enrollRemove = false;
+    public static bool EnrollRemove => enrollRemove;
+    public static void ClearEnrollRemove() => enrollRemove = false;
+
     void Start()
     {
+        newFingerprintReceived = false;
+        authFailed = false;
+        enrollReady = false;
+        enrollRemove = false;
+        LastFingerprintID = "";
         OpenSerialPort();
     }
 
@@ -45,6 +58,19 @@ public class FingerprintReader : MonoBehaviour
         }
     }
 
+    public void SendCommand(string cmd)
+    {
+        if (serialPort != null && serialPort.IsOpen)
+        {
+            serialPort.WriteLine(cmd);
+            Debug.Log("Sent to Arduino: " + cmd);
+        }
+        else
+        {
+            Debug.LogWarning("Serial port not open — cannot send: " + cmd);
+        }
+    }
+
     void ReadSerialData()
     {
         while (isRunning && serialPort != null && serialPort.IsOpen)
@@ -57,6 +83,14 @@ public class FingerprintReader : MonoBehaviour
                     LastFingerprintID = data.Substring("AUTH_SUCCESS:".Length);
                     newFingerprintReceived = true;
                 }
+                else if (data == "ENROLL_READY")
+                {
+                    enrollReady = true;
+                }
+                else if (data == "ENROLL_REMOVE")
+                {
+                    enrollRemove = true;
+                }
                 else if (data == "AUTH_FAIL")
                 {
                     authFailed = true;
@@ -64,6 +98,13 @@ public class FingerprintReader : MonoBehaviour
             }
             catch { }
         }
+    }
+
+    void OnDestroy()
+    {
+        isRunning = false;
+        if (serialPort != null && serialPort.IsOpen)
+            serialPort.Close();
     }
 
     void OnApplicationQuit()

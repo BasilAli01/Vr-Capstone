@@ -1727,60 +1727,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659059932}
   m_CullTransparentMesh: 1
---- !u!1 &773964742
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 773964744}
-  - component: {fileID: 773964743}
-  m_Layer: 0
-  m_Name: VRKeyboard
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &773964743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773964742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c40da42e8c19624eb8113e847db7d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VRKeyboard
-  _keySize: 0.055
-  _keyGap: 0.008
-  _distanceFromCamera: 0.7
-  _verticalOffset: -0.15
-  _keyColor: {r: 0.18, g: 0.18, b: 0.22, a: 1}
-  _keyHighlight: {r: 0.35, g: 0.35, b: 0.7, a: 1}
-  _keyPressed: {r: 0.5, g: 0.5, b: 1, a: 1}
-  _specialKeyColor: {r: 0.25, g: 0.25, b: 0.35, a: 1}
-  _keyTextColor: {r: 1, g: 1, b: 1, a: 1}
-  _bgColor: {r: 0.08, g: 0.08, b: 0.1, a: 0.95}
---- !u!4 &773964744
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773964742}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &785451878
 Material:
   serializedVersion: 8
@@ -2863,7 +2809,6 @@ GameObject:
   - component: {fileID: 1338776525}
   - component: {fileID: 1338776524}
   - component: {fileID: 1338776523}
-  - component: {fileID: 1338776526}
   m_Layer: 5
   m_Name: UsernameField
   m_TagString: Untagged
@@ -3030,18 +2975,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338776521}
   m_CullTransparentMesh: 1
---- !u!114 &1338776526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338776521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13916424b788c7b4a959d37636871fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VRKeyboardLinker
 --- !u!1 &1355681105
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,7 +4272,6 @@ MonoBehaviour:
   loginPanel: {fileID: 659059932}
   loggedInPanel: {fileID: 1260319320}
   loggedInText: {fileID: 1526052327}
-  fingerprintReader: {fileID: 0}
 --- !u!1 &1703568385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5546,4 +5478,3 @@ SceneRoots:
   - {fileID: 1964599859}
   - {fileID: 53402271}
   - {fileID: 620063898}
-  - {fileID: 773964744}

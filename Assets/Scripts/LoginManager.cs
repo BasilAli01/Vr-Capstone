@@ -16,8 +16,30 @@ public class LoginManager : MonoBehaviour
     public GameObject loggedInPanel;
     public TextMeshProUGUI loggedInText;
 
+    [Header("Fingerprint Reader")]
+    public FingerprintReader fingerprintReader;
+
     private string capturedFingerprintID = "";
     private const string projectID = "vrbank-bba01";
+
+    void Start()
+    {
+        if (fingerprintReader == null)
+            fingerprintReader = FindObjectOfType<FingerprintReader>();
+
+        StartFingerprintScan();
+    }
+
+    public void StartFingerprintScan()
+    {
+        capturedFingerprintID = "";
+        FingerprintReader.ClearFingerprint();
+        FingerprintReader.ClearAuthFailed();
+        fingerprintStatusText.text = "Place your finger on the scanner...";
+        fingerprintStatusText.color = Color.white;
+        if (fingerprintReader != null)
+            fingerprintReader.SendCommand("AUTH");
+    }
 
     void Update()
     {
@@ -27,6 +49,13 @@ public class LoginManager : MonoBehaviour
             FingerprintReader.ClearFingerprint();
             fingerprintStatusText.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
             fingerprintStatusText.color = Color.green;
+        }
+        else if (FingerprintReader.AuthFailed)
+        {
+            FingerprintReader.ClearAuthFailed();
+            capturedFingerprintID = "";
+            fingerprintStatusText.text = "Scan failed. Please try again.";
+            fingerprintStatusText.color = Color.red;
         }
     }
 

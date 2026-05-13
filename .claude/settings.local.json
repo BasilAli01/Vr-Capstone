@@ -19,7 +19,8 @@
       "mcp__mcp-unity__set_transform",
       "Bash(xargs grep -l \"ActionBasedControllerManager\\\\|TeleportInteractor\")",
       "mcp__mcp-unity__duplicate_gameobject",
-      "mcp__mcp-unity__delete_gameobject"
+      "mcp__mcp-unity__delete_gameobject",
+      "mcp__mcp-unity__batch_execute"
     ]
   },
   "enableAllProjectMcpServers": true,

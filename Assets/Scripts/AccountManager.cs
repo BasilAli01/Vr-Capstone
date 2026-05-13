@@ -32,10 +32,16 @@ public class AccountManager : MonoBehaviour
     private string firestoreURL;
     private bool _waitingForFingerprint = false;
 
+    [Header("Fingerprint Reader")]
+    public FingerprintReader fingerprintReader;
+
     void Start()
     {
         firestoreURL = "https://firestore.googleapis.com/v1/projects/" + projectID + "/databases/(default)/documents/accounts/";
         spatialPanel.SetActive(false);
+
+        if (fingerprintReader == null)
+            fingerprintReader = FindObjectOfType<FingerprintReader>();
 
         usernameField.characterLimit = 10;
         usernameField.onValueChanged.AddListener(OnUsernameChanged);
@@ -65,10 +71,21 @@ public class AccountManager : MonoBehaviour
 
     void BeginFingerprintScan()
     {
+        if (fingerprintReader == null)
+        {
+            fingerprintStatus.text = "Fingerprint reader not found!";
+            fingerprintStatus.color = Color.red;
+            return;
+        }
         capturedFingerprintID = "";
+        FingerprintReader.ClearFingerprint();
+        FingerprintReader.ClearAuthFailed();
+        FingerprintReader.ClearEnrollReady();
+        FingerprintReader.ClearEnrollRemove();
         _waitingForFingerprint = true;
-        fingerprintStatus.text = "Place your finger on the scanner...";
+        fingerprintStatus.text = "Starting enrollment...";
         fingerprintStatus.color = Color.white;
+        fingerprintReader.SendCommand("ENROLL");
     }
 
     void Update()
@@ -83,11 +100,24 @@ public class AccountManager : MonoBehaviour
             fingerprintStatus.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
             fingerprintStatus.color = Color.green;
         }
+        else if (FingerprintReader.EnrollReady)
+        {
+            FingerprintReader.ClearEnrollReady();
+            fingerprintStatus.text = "Place your finger on the scanner...";
+            fingerprintStatus.color = Color.white;
+        }
+        else if (FingerprintReader.EnrollRemove)
+        {
+            FingerprintReader.ClearEnrollRemove();
+            fingerprintStatus.text = "Remove finger, then place it again...";
+            fingerprintStatus.color = Color.yellow;
+        }
         else if (FingerprintReader.AuthFailed)
         {
             FingerprintReader.ClearAuthFailed();
-            fingerprintStatus.text = "Not recognized. Try again.";
+            fingerprintStatus.text = "Scan failed. Retrying...";
             fingerprintStatus.color = Color.red;
+            StartCoroutine(RetryFingerprintScan());
         }
     }
 
@@ -164,9 +194,22 @@ public class AccountManager : MonoBehaviour
         }
     }
 
+    IEnumerator RetryFingerprintScan()
+    {
+        yield return new WaitForSeconds(1.5f);
+        if (_waitingForFingerprint && fingerprintReader != null)
+        {
+            fingerprintStatus.text = "Ready to scan again...";
+            fingerprintStatus.color = Color.white;
+            fingerprintReader.SendCommand("ENROLL");
+        }
+    }
+
     public void OnEditPressed()
     {
         ShowFormStep();
+        if (string.IsNullOrEmpty(capturedFingerprintID))
+            BeginFingerprintScan();
     }
 
     public void OnContinuePressed()
