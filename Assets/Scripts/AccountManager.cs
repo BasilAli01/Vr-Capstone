@@ -97,7 +97,7 @@ public class AccountManager : MonoBehaviour
             capturedFingerprintID = FingerprintReader.LastFingerprintID;
             FingerprintReader.ClearFingerprint();
             _waitingForFingerprint = false;
-            fingerprintStatus.text = "Fingerprint Captured (ID: " + capturedFingerprintID + ")";
+            fingerprintStatus.text = "Fingerprint Captured";
             fingerprintStatus.color = Color.green;
         }
         else if (FingerprintReader.EnrollReady)
@@ -152,7 +152,7 @@ public class AccountManager : MonoBehaviour
 
         summaryFullName.text = "Full Name: " + fullName;
         summaryUsername.text = "Username: " + username;
-        summaryFingerprint.text = "Fingerprint ID: " + capturedFingerprintID;
+        summaryFingerprint.text = "Fingerprint: Enrolled";
         ShowSummaryStep();
     }
 

@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.IO.Ports;
 using System.Threading;
+using System.Security.Cryptography;
+using System.Text;
 
 public class FingerprintReader : MonoBehaviour
 {
@@ -80,7 +82,7 @@ public class FingerprintReader : MonoBehaviour
                 string data = serialPort.ReadLine().Trim();
                 if (data.StartsWith("AUTH_SUCCESS:"))
                 {
-                    LastFingerprintID = data.Substring("AUTH_SUCCESS:".Length);
+                    LastFingerprintID = HashID(data.Substring("AUTH_SUCCESS:".Length));
                     newFingerprintReceived = true;
                 }
                 else if (data == "ENROLL_READY")
@@ -112,5 +114,17 @@ public class FingerprintReader : MonoBehaviour
         isRunning = false;
         if (serialPort != null && serialPort.IsOpen)
             serialPort.Close();
+    }
+
+    private static string HashID(string id)
+    {
+        using (SHA256 sha256 = SHA256.Create())
+        {
+            byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(id));
+            StringBuilder sb = new StringBuilder();
+            foreach (byte b in bytes)
+                sb.Append(b.ToString("x2"));
+            return sb.ToString();
+        }
     }
 }
